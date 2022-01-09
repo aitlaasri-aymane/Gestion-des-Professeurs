@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane prefHeight="100.0" prefWidth="350.0"
+        xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+               fx:controller="metier.ModifyDepartController">
+    <top>
+        <VBox spacing="15" >
+            <padding>
+                <Insets topRightBottomLeft="5"></Insets>
+            </padding>
+            <HBox alignment="CENTER">
+            <VBox alignment="CENTER_LEFT" spacing="15">
+                <padding>
+                    <Insets right="10" top="20"></Insets>
+                </padding>
+            <Label text="Nom"></Label>
+            </VBox>
+            <VBox alignment="CENTER_LEFT" spacing="5">
+                <padding>
+                    <Insets top="20"></Insets>
+                </padding>
+            <TextField fx:id="fieldNom"></TextField>
+            </VBox>
+            </HBox>
+            <HBox alignment="CENTER">
+            <Button fx:id="buttonModify" mnemonicParsing="false" text="Modifier" onAction="#modifierDepart"></Button>
+            </HBox>
+        </VBox>
+    </top>
+<center>
+    <TableView fx:id="modifyDepartTableView" prefWidth="1200" managed="false" visible="false">
+        <columns>
+            <TableColumn prefWidth="150.0" text="ID Departement" fx:id="departID_Depart" />
+            <TableColumn prefWidth="944.0" text="Nom" fx:id="departNom_Depart" />
+        </columns>
+    </TableView>
+</center>
+    <TextField fx:id="fieldID" visible="false" prefHeight="0" prefWidth="0"></TextField>
+</BorderPane>

@@ -1,0 +1,17 @@
+.button{
+    -fx-background-color:linear-gradient(#f6ebbe, #e6c34d);
+    -fx-text-fill: #311c09;
+    -fx-background-radius: 6, 5;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.4) , 5, 0.0 , 0 , 1 );
+}
+#buttonAdd,#departButtonAdd{
+    -fx-background-color:linear-gradient(#f0ff35, #a9ff00);
+    -fx-text-fill: #395306;
+}
+#buttonRemove,#departButtonRemove{
+    -fx-background-color:linear-gradient(#ff5400, #be1d00);
+    -fx-text-fill: #ffffff;
+}
+#PR,#DP{
+    -fx-background-color:linear-gradient(#e8e8e8, #e8e8e8);
+}

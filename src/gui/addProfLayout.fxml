@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane prefHeight="250.0" prefWidth="350.0"
+        xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+               fx:controller="metier.AddProfController">
+    <top>
+        <VBox spacing="15" >
+            <padding>
+                <Insets topRightBottomLeft="5"></Insets>
+            </padding>
+            <HBox alignment="CENTER">
+            <VBox alignment="CENTER_LEFT" spacing="15">
+                <padding>
+                    <Insets right="10" top="20"></Insets>
+                </padding>
+            <Label text="Nom"></Label>
+            <Label text="Prenom"></Label>
+            <Label text="CIN"></Label>
+            <Label text="Adresse"></Label>
+            <Label text="Telephone"></Label>
+            <Label text="Email"></Label>
+            <Label text="Departement"></Label>
+            <Label text="Date de Recrutement"></Label>
+            </VBox>
+            <VBox alignment="CENTER_LEFT" spacing="5">
+                <padding>
+                    <Insets top="20"></Insets>
+                </padding>
+            <TextField fx:id="fieldNom"></TextField>
+            <TextField fx:id="fieldPrenom"></TextField>
+            <TextField fx:id="fieldCIN"></TextField>
+            <TextField fx:id="fieldAdresse"></TextField>
+            <TextField fx:id="fieldTelephone"></TextField>
+            <TextField fx:id="fieldEmail"></TextField>
+            <ChoiceBox fx:id="fieldDepartement">
+            </ChoiceBox>
+            <DatePicker fx:id="fieldDate"></DatePicker>
+            </VBox>
+            </HBox>
+            <HBox alignment="CENTER">
+            <Button fx:id="buttonAdd" mnemonicParsing="false" text="Ajouter" onAction="#ajouterProf"></Button>
+            </HBox>
+        </VBox>
+    </top>
+<center>
+    <TableView fx:id="addProfTableView" prefWidth="0" prefHeight="0" visible="false">
+        <columns>
+            <TableColumn prefWidth="80.0" text="ID Professeur" fx:id="profID" />
+            <TableColumn prefWidth="100.0" text="Departement" fx:id="profDepartement" />
+            <TableColumn prefWidth="100.0" text="Nom" fx:id="profNom" />
+            <TableColumn prefWidth="100.0" text="Prenom" fx:id="profPrenom" />
+            <TableColumn prefWidth="75.0" text="CIN" fx:id="profCIN" />
+            <TableColumn prefWidth="200.0" text="Adresse" fx:id="profAdresse" />
+            <TableColumn prefWidth="100.0" text="Telephone" fx:id="profTelephone" />
+            <TableColumn prefWidth="200.0" text="Email" fx:id="profEmail" />
+            <TableColumn prefWidth="125.0" text="Date de recrutement" fx:id="profDate_recrutement" />
+        </columns>
+    </TableView>
+</center>
+</BorderPane>
